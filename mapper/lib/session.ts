@@ -5,7 +5,7 @@
 import { type Dome, DOOR_HUB, type PanelSize, type Rotation, cornerPositions, placement, planPosition, slotById } from "./dome";
 import { type Mapping, type Output, assign, listOutputs, outputForSlot } from "./mapping";
 import { BLACK, FIND_FRAME, PI_COLOURS, orientFrame, piFrame, verifyFrame } from "./patterns";
-import { buildProject } from "./project";
+import type { BuiltProject } from "./project";
 
 export type Phase = "idle" | "find" | "orient" | "confirm" | "verify" | "all";
 
@@ -50,7 +50,7 @@ export class Session {
     readonly mapping: Mapping,
     private readonly save: (mapping: Mapping) => Promise<void>,
     private readonly sender: Sender,
-    private readonly root: string,
+    private readonly build: (mapping: Mapping) => Promise<BuiltProject>,
   ) {
     this.orientFrames = { large: orientFrame(dome.panels.large), small: orientFrame(dome.panels.small) };
     this.piFrames = new Map(mapping.pis.map((pi, i) => [pi.name, piFrame(i)]));
@@ -163,7 +163,7 @@ export class Session {
         this.lookAt(null);
         break;
       case "generate": {
-        const built = await buildProject(this.root, this.dome, this.mapping);
+        const built = await this.build(this.mapping);
         const missing = built.unmapped.length ? ` Not mapped yet: ${built.unmapped.map((s) => s.toUpperCase()).join(", ")}.` : "";
         const count = `${built.mapped.length} panel${built.mapped.length === 1 ? "" : "s"}`;
         this.message = `Wrote ${built.path.split("/").slice(-2).join("/")} with ${count} mapped.${missing}`;
@@ -197,7 +197,6 @@ export class Session {
   state() {
     const slots = new Set(Object.values(this.mapping.outputs).flatMap((s) => (s === "empty" ? [] : [s.slot])));
     return {
-      site: this.mapping.site,
       phase: this.phase,
       cursor: this.cursor,
       pending: this.pending,

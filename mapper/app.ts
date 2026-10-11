@@ -8,7 +8,6 @@ interface DomeView {
 }
 
 interface State {
-  site: string;
   phase: "idle" | "find" | "orient" | "confirm" | "verify" | "all";
   cursor: string | null;
   pending: { slot: string; red?: number } | null;
@@ -196,7 +195,7 @@ function render() {
   shown = next;
   app.innerHTML = `
     <header>
-      <h1>${escape(state.site)}</h1>
+      <h1>Panel mapper</h1>
       <button class="quiet small" data-action="view">${fromInside ? "Seen from inside" : "Seen from above"}</button>
     </header>
     ${blockedBanner()}

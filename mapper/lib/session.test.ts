@@ -19,12 +19,13 @@ async function setup() {
     resolve: async (host: string) => (host.startsWith("missing") ? null : "127.0.0.1"),
     problem: () => null,
   };
-  const mapping = newMapping("Test", [
+  const mapping = newMapping([
     { name: "pi-a", host: "pi-a.local", channels: 3 },
     { name: "pi-gone", host: "missing.local", channels: 2 },
   ]);
   const saves: Mapping[] = [];
-  const session = new Session(dome, mapping, async (m) => void saves.push(structuredClone(m)), sender, root);
+  const build = async (m: Mapping) => buildProject(root, dome, m, join(await mkdtemp(join(tmpdir(), "mapper-")), "Test.lxp"));
+  const session = new Session(dome, mapping, async (m) => void saves.push(structuredClone(m)), sender, build);
   await session.resolvePis();
   return { session, mapping, sent, saves };
 }
@@ -133,7 +134,7 @@ test("the built project points each mapped panel at its output, turned as mounte
   await session.act({ type: "empty" });
 
   const out = await mkdtemp(join(tmpdir(), "mapper-"));
-  const built = await buildProject(root, dome, mapping, out);
+  const built = await buildProject(root, dome, mapping, join(out, "Test.lxp"));
   expect(built.mapped).toEqual(["bse"]);
   expect(built.unmapped).toHaveLength(17);
 

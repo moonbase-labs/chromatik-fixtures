@@ -1,5 +1,5 @@
-// A site's mapping: which slot each Pi output feeds, and how each panel is turned. Saved as JSON in
-// mappings/<Site>.json after every change, so a dropped laptop loses nothing.
+// A mapping: which slot each Pi output feeds, and how each panel is turned. Saved as JSON in
+// mappings/ after every change, so a dropped laptop loses nothing.
 import { mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import type { Rotation } from "./dome";
@@ -23,7 +23,6 @@ export interface Assignment {
 export type OutputState = Assignment | "empty";
 
 export interface Mapping {
-  site: string;
   layout: "TelecortexDomeUpper";
   pis: Pi[];
   outputs: Record<string, OutputState>;
@@ -53,16 +52,15 @@ export const listOutputs = (mapping: Mapping): Output[] =>
     Array.from({ length: pi.channels }, (_, channel) => ({ key: outputKey(pi.name, channel), pi: pi.name, host: pi.host, channel })),
   );
 
-export const newMapping = (site: string, pis: Pi[] = DEFAULT_PIS): Mapping => ({
-  site,
+export const newMapping = (pis: Pi[] = DEFAULT_PIS): Mapping => ({
   layout: "TelecortexDomeUpper",
   pis: structuredClone(pis),
   outputs: {},
 });
 
-export async function loadMapping(path: string, site: string): Promise<Mapping> {
+export async function loadMapping(path: string): Promise<Mapping> {
   const file = Bun.file(path);
-  return (await file.exists()) ? file.json() : newMapping(site);
+  return (await file.exists()) ? file.json() : newMapping();
 }
 
 export async function saveMapping(path: string, mapping: Mapping) {

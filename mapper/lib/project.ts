@@ -11,7 +11,7 @@ export interface BuiltProject {
   unmapped: string[];
 }
 
-export async function buildProject(root: string, dome: Dome, mapping: Mapping, outDir = join(root, "projects")): Promise<BuiltProject> {
+export async function buildProject(root: string, dome: Dome, mapping: Mapping, path: string): Promise<BuiltProject> {
   const project = await Bun.file(join(root, "projects", "TelecortexDomeUpperPanels.lxp")).json();
   project.timestamp = Date.now();
 
@@ -47,7 +47,6 @@ export async function buildProject(root: string, dome: Dome, mapping: Mapping, o
     fixture.parameters.tags = [...tags, id].join(",");
   }
 
-  const path = join(outDir, `TelecortexDomeUpper${mapping.site}.lxp`);
   await Bun.write(path, JSON.stringify(project, null, 2) + "\n");
   return { path, mapped, unmapped };
 }

@@ -1,37 +1,38 @@
 #!/usr/bin/env bun
 // Panel mapper: lights each Pi output in turn while someone under the dome taps, on a phone, where it
-// lit. The result is saved to mappings/<Site>.json and turned into a Chromatik project.
+// lit. The result is saved to mappings/TelecortexDomeUpper.json and turned into a Chromatik project,
+// projects/TelecortexDomeUpperMapped.lxp.
 //
-//   bun mapper/server.ts --site BlazingSwan2026
+//   bun mapper/server.ts
 //
 // Turn Chromatik's output off first: both send to the same Pis.
 import { networkInterfaces } from "node:os";
-import { join, resolve } from "node:path";
+import { basename, join, relative, resolve } from "node:path";
 import { parseArgs } from "node:util";
 import index from "./index.html";
 import { loadDome } from "./lib/dome";
 import { loadMapping, saveMapping } from "./lib/mapping";
 import { OpcSender } from "./lib/opc";
+import { buildProject } from "./lib/project";
 import { type Action, Session } from "./lib/session";
 
 const { values } = parseArgs({
   args: Bun.argv.slice(2),
   options: {
-    site: { type: "string", default: "Site" },
     port: { type: "string", default: "4269" },
     mapping: { type: "string" },
   },
 });
 
-// The site name ends up in a project file name, TelecortexDomeUpper<Site>.lxp.
-const site = values.site!.replace(/[^A-Za-z0-9]/g, "");
 const root = resolve(import.meta.dir, "..");
-const mappingPath = values.mapping ? resolve(values.mapping) : join(root, "mappings", `${site}.json`);
+const mappingPath = values.mapping ? resolve(values.mapping) : join(root, "mappings", "TelecortexDomeUpper.json");
+// Named after the mapping, so trying out a second mapping never overwrites the first one's project.
+const projectPath = join(root, "projects", `${basename(mappingPath, ".json")}Mapped.lxp`);
 
 const dome = await loadDome(root);
-const mapping = await loadMapping(mappingPath, site);
+const mapping = await loadMapping(mappingPath);
 const sender = await OpcSender.create();
-const session = new Session(dome, mapping, (m) => saveMapping(mappingPath, m), sender, root);
+const session = new Session(dome, mapping, (m) => saveMapping(mappingPath, m), sender, (m) => buildProject(root, dome, m, projectPath));
 await session.resolvePis();
 
 const server = Bun.serve({
@@ -60,7 +61,7 @@ const addresses = Object.values(networkInterfaces())
   .flat()
   .filter((a) => a && a.family === "IPv4" && !a.internal)
   .map((a) => `http://${a!.address}:${server.port}`);
-console.log(`Mapping ${mappingPath}`);
+console.log(`Mapping ${relative(process.cwd(), mappingPath)}, builds ${relative(process.cwd(), projectPath)}`);
 for (const pi of session.state().pis) console.log(`  ${pi.name.padEnd(16)} ${pi.host.padEnd(24)} ${pi.address ?? "NOT FOUND"}`);
 console.log(`Open on a phone on the same network:\n  ${addresses.join("\n  ") || `http://localhost:${server.port}`}`);
 

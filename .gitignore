@@ -1,3 +1,8 @@
 .DS_Store
 # Claude Code's local settings and worktrees
 .claude/
+
+# Chromatik copies its bundled examples into each linked folder on start
+fixtures/Examples/
+projects/Examples/
+scripts/Examples/

@@ -20,6 +20,12 @@
       "label": "SAD Channel",
       "description": "OPC channel for panel SAD"
     },
+    "outputSAD": {
+      "type": "boolean",
+      "default": false,
+      "label": "SAD Output",
+      "description": "Send to panel SAD. Off until it has a host and channel of its own"
+    },
     "hostSARD": {
       "type": "string",
       "default": "127.0.0.1",
@@ -33,6 +39,12 @@
       "max": 255,
       "label": "SARD Channel",
       "description": "OPC channel for panel SARD"
+    },
+    "outputSARD": {
+      "type": "boolean",
+      "default": false,
+      "label": "SARD Output",
+      "description": "Send to panel SARD. Off until it has a host and channel of its own"
     },
     "hostSARU": {
       "type": "string",
@@ -48,6 +60,12 @@
       "label": "SARU Channel",
       "description": "OPC channel for panel SARU"
     },
+    "outputSARU": {
+      "type": "boolean",
+      "default": false,
+      "label": "SARU Output",
+      "description": "Send to panel SARU. Off until it has a host and channel of its own"
+    },
     "hostSALU": {
       "type": "string",
       "default": "127.0.0.1",
@@ -61,6 +79,12 @@
       "max": 255,
       "label": "SALU Channel",
       "description": "OPC channel for panel SALU"
+    },
+    "outputSALU": {
+      "type": "boolean",
+      "default": false,
+      "label": "SALU Output",
+      "description": "Send to panel SALU. Off until it has a host and channel of its own"
     },
     "hostSALD": {
       "type": "string",
@@ -76,6 +100,12 @@
       "label": "SALD Channel",
       "description": "OPC channel for panel SALD"
     },
+    "outputSALD": {
+      "type": "boolean",
+      "default": false,
+      "label": "SALD Output",
+      "description": "Send to panel SALD. Off until it has a host and channel of its own"
+    },
     "hostBU": {
       "type": "string",
       "default": "snowy-breakfast.local",
@@ -89,6 +119,12 @@
       "max": 255,
       "label": "BU Channel",
       "description": "OPC channel for panel BU"
+    },
+    "outputBU": {
+      "type": "boolean",
+      "default": true,
+      "label": "BU Output",
+      "description": "Send to panel BU. Off until it has a host and channel of its own"
     },
     "hostSLIU": {
       "type": "string",
@@ -104,6 +140,12 @@
       "label": "SLIU Channel",
       "description": "OPC channel for panel SLIU"
     },
+    "outputSLIU": {
+      "type": "boolean",
+      "default": true,
+      "label": "SLIU Output",
+      "description": "Send to panel SLIU. Off until it has a host and channel of its own"
+    },
     "hostSLU": {
       "type": "string",
       "default": "127.0.0.1",
@@ -117,6 +159,12 @@
       "max": 255,
       "label": "SLU Channel",
       "description": "OPC channel for panel SLU"
+    },
+    "outputSLU": {
+      "type": "boolean",
+      "default": false,
+      "label": "SLU Output",
+      "description": "Send to panel SLU. Off until it has a host and channel of its own"
     },
     "hostBRD": {
       "type": "string",
@@ -132,6 +180,12 @@
       "label": "BRD Channel",
       "description": "OPC channel for panel BRD"
     },
+    "outputBRD": {
+      "type": "boolean",
+      "default": false,
+      "label": "BRD Output",
+      "description": "Send to panel BRD. Off until it has a host and channel of its own"
+    },
     "hostSEN": {
       "type": "string",
       "default": "127.0.0.1",
@@ -145,6 +199,12 @@
       "max": 255,
       "label": "SEN Channel",
       "description": "OPC channel for panel SEN"
+    },
+    "outputSEN": {
+      "type": "boolean",
+      "default": false,
+      "label": "SEN Output",
+      "description": "Send to panel SEN. Off until it has a host and channel of its own"
     },
     "hostSES": {
       "type": "string",
@@ -160,6 +220,12 @@
       "label": "SES Channel",
       "description": "OPC channel for panel SES"
     },
+    "outputSES": {
+      "type": "boolean",
+      "default": false,
+      "label": "SES Output",
+      "description": "Send to panel SES. Off until it has a host and channel of its own"
+    },
     "hostBSE": {
       "type": "string",
       "default": "127.0.0.1",
@@ -173,6 +239,12 @@
       "max": 255,
       "label": "BSE Channel",
       "description": "OPC channel for panel BSE"
+    },
+    "outputBSE": {
+      "type": "boolean",
+      "default": false,
+      "label": "BSE Output",
+      "description": "Send to panel BSE. Off until it has a host and channel of its own"
     },
     "hostBSW": {
       "type": "string",
@@ -188,6 +260,12 @@
       "label": "BSW Channel",
       "description": "OPC channel for panel BSW"
     },
+    "outputBSW": {
+      "type": "boolean",
+      "default": false,
+      "label": "BSW Output",
+      "description": "Send to panel BSW. Off until it has a host and channel of its own"
+    },
     "hostSWS": {
       "type": "string",
       "default": "127.0.0.1",
@@ -201,6 +279,12 @@
       "max": 255,
       "label": "SWS Channel",
       "description": "OPC channel for panel SWS"
+    },
+    "outputSWS": {
+      "type": "boolean",
+      "default": false,
+      "label": "SWS Output",
+      "description": "Send to panel SWS. Off until it has a host and channel of its own"
     },
     "hostSWN": {
       "type": "string",
@@ -216,6 +300,12 @@
       "label": "SWN Channel",
       "description": "OPC channel for panel SWN"
     },
+    "outputSWN": {
+      "type": "boolean",
+      "default": false,
+      "label": "SWN Output",
+      "description": "Send to panel SWN. Off until it has a host and channel of its own"
+    },
     "hostBLD": {
       "type": "string",
       "default": "127.0.0.1",
@@ -229,6 +319,12 @@
       "max": 255,
       "label": "BLD Channel",
       "description": "OPC channel for panel BLD"
+    },
+    "outputBLD": {
+      "type": "boolean",
+      "default": false,
+      "label": "BLD Output",
+      "description": "Send to panel BLD. Off until it has a host and channel of its own"
     },
     "hostSRU": {
       "type": "string",
@@ -244,6 +340,12 @@
       "label": "SRU Channel",
       "description": "OPC channel for panel SRU"
     },
+    "outputSRU": {
+      "type": "boolean",
+      "default": false,
+      "label": "SRU Output",
+      "description": "Send to panel SRU. Off until it has a host and channel of its own"
+    },
     "hostSRIU": {
       "type": "string",
       "default": "192.168.1.105",
@@ -257,6 +359,12 @@
       "max": 255,
       "label": "SRIU Channel",
       "description": "OPC channel for panel SRIU"
+    },
+    "outputSRIU": {
+      "type": "boolean",
+      "default": true,
+      "label": "SRIU Output",
+      "description": "Send to panel SRIU. Off until it has a host and channel of its own"
     },
     "port": {
       "type": "int",
@@ -300,6 +408,7 @@
         "host": "$hostSAD",
         "port": "$port",
         "channel": "$channelSAD",
+        "enabled": "$outputSAD",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -580,6 +689,7 @@
         "host": "$hostSARD",
         "port": "$port",
         "channel": "$channelSARD",
+        "enabled": "$outputSARD",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -860,6 +970,7 @@
         "host": "$hostSARU",
         "port": "$port",
         "channel": "$channelSARU",
+        "enabled": "$outputSARU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -1140,6 +1251,7 @@
         "host": "$hostSALU",
         "port": "$port",
         "channel": "$channelSALU",
+        "enabled": "$outputSALU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -1420,6 +1532,7 @@
         "host": "$hostSALD",
         "port": "$port",
         "channel": "$channelSALD",
+        "enabled": "$outputSALD",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -1700,6 +1813,7 @@
         "host": "$hostBU",
         "port": "$port",
         "channel": "$channelBU",
+        "enabled": "$outputBU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -2036,6 +2150,7 @@
         "host": "$hostSLIU",
         "port": "$port",
         "channel": "$channelSLIU",
+        "enabled": "$outputSLIU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -2316,6 +2431,7 @@
         "host": "$hostSLU",
         "port": "$port",
         "channel": "$channelSLU",
+        "enabled": "$outputSLU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -2596,6 +2712,7 @@
         "host": "$hostBRD",
         "port": "$port",
         "channel": "$channelBRD",
+        "enabled": "$outputBRD",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -2932,6 +3049,7 @@
         "host": "$hostSEN",
         "port": "$port",
         "channel": "$channelSEN",
+        "enabled": "$outputSEN",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -3212,6 +3330,7 @@
         "host": "$hostSES",
         "port": "$port",
         "channel": "$channelSES",
+        "enabled": "$outputSES",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -3492,6 +3611,7 @@
         "host": "$hostBSE",
         "port": "$port",
         "channel": "$channelBSE",
+        "enabled": "$outputBSE",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -3828,6 +3948,7 @@
         "host": "$hostBSW",
         "port": "$port",
         "channel": "$channelBSW",
+        "enabled": "$outputBSW",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -4164,6 +4285,7 @@
         "host": "$hostSWS",
         "port": "$port",
         "channel": "$channelSWS",
+        "enabled": "$outputSWS",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -4444,6 +4566,7 @@
         "host": "$hostSWN",
         "port": "$port",
         "channel": "$channelSWN",
+        "enabled": "$outputSWN",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -4724,6 +4847,7 @@
         "host": "$hostBLD",
         "port": "$port",
         "channel": "$channelBLD",
+        "enabled": "$outputBLD",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -5060,6 +5184,7 @@
         "host": "$hostSRU",
         "port": "$port",
         "channel": "$channelSRU",
+        "enabled": "$outputSRU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },
@@ -5340,6 +5465,7 @@
         "host": "$hostSRIU",
         "port": "$port",
         "channel": "$channelSRIU",
+        "enabled": "$outputSRIU",
         "transport": "$transport",
         "byteOrder": "rgb"
       },

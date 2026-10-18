@@ -82,7 +82,7 @@
         "jsonFixtureType": "TelecortexDomeOG",
         "jsonParameters": {
           "hostLB": "lingering-brook.local",
-          "hostQH": "quiet-hill",
+          "hostQH": "192.168.1.105",
           "hostCT": "cold-thunder.local",
           "hostSB": "still-brook",
           "hostDF": "damp-frog",

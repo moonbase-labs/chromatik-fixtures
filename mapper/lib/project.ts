@@ -36,11 +36,14 @@ export async function buildProject(root: string, dome: Dome, mapping: Mapping, p
     if (found) {
       const { name, port } = splitHost(found.host);
       fixture.jsonParameters = { ...fixture.jsonParameters, host: name, port, opcChannel: found.channel };
+      fixture.parameters.enabled = true;
       if (found.assignment.check === "mismatch") tags.push("check");
       mapped.push(id);
     } else {
-      // Kept in the model so the preview shows the whole dome, but sent nowhere useful.
+      // Kept in the model so the preview shows the whole dome, with output off. Left on, every unmapped
+      // panel would share 127.0.0.1 channel 0 and Chromatik would report them all as colliding.
       fixture.jsonParameters = { ...fixture.jsonParameters, host: "127.0.0.1", opcChannel: 0 };
+      fixture.parameters.enabled = false;
       tags.push("unmapped");
       unmapped.push(id);
     }

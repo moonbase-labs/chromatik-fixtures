@@ -23,18 +23,22 @@ Then:
 ```bash
 git clone https://github.com/moonbase-labs/chromatik-fixtures.git
 cd chromatik-fixtures
-bun scripts/link-fixtures.ts
+bun scripts/link-chromatik.ts
 ```
 
-That's all the installing there is: nothing comes from npm. In Chromatik, open any project in `projects/`. `TelecortexThreePanels` is a good first one.
+Start Chromatik once before linking, so `~/Chromatik` exists. That's all the installing there is: nothing comes from npm. In Chromatik, open any project from `Projects`, which is now this repo's `projects/`. `TelecortexThreePanels` is a good first one.
 
-To get the latest, `git pull` in the repo. Fixtures update in Chromatik on their own; re-run the link script only when one has been added, renamed or removed.
+To get the latest, `git pull` in the repo. Chromatik sees the change on its own.
 
 ### The link script
 
-`scripts/link-fixtures.ts` symlinks every fixture into `~/Chromatik/Fixtures/`, which is why a `git pull` updates what Chromatik sees. Re-running it links new fixtures and clears links to ones that have gone. It never overwrites a file you have edited there, and is safe to run any number of times. On Windows, symlinks need Developer Mode turned on.
+`scripts/link-chromatik.ts` turns `~/Chromatik/Fixtures`, `Projects` and `Scripts` into links to `fixtures/`, `projects/` and `scripts/` here. Chromatik then loads straight from the repo, which is why a `git pull` updates what it sees. A project saved in Chromatik lands in `projects/`, ready to commit.
 
-The links go straight into `Fixtures/`, not a subfolder, so the type names match what the projects expect.
+Whole folders are linked, not single files. A fixture's file name is the type name every project stores, and the link keeps those names exactly as they are in the repo.
+
+Anything already in one of those folders is kept: the script renames the folder to `<Name>.bak.<date-time>` before linking. It is safe to re-run. A correct link is left alone, and a link pointing anywhere else is replaced. To use another Chromatik folder, pass its path. To undo it, delete the link and rename the `.bak` folder back.
+
+Chromatik copies its bundled examples into each folder as `Examples/` every time it starts. Git ignores those. On Windows the links are directory junctions, which need no Developer Mode.
 
 ### Plugins
 
@@ -45,6 +49,8 @@ Video, Shader, Panel Transforms and the other Laserphile patterns come from [chr
 - **Join the dome's network.** Chromatik sends to the Raspberry Pis over it, using OPC.
 - **Pis are reached by name**, e.g. `lingering-brook.local`. A Mac resolves these out of the box, and Linux does with Avahi's `nss-mdns`. If a name won't resolve, put the Pi's IP address in its place, from the router's device list.
 - **On a Mac, allow Local Network access.** macOS blocks each app from the local network until you allow it. That applies to Chromatik, and to the terminal you run the mapper in. Turn it on in System Settings → Privacy & Security → Local Network, then restart that app. Until you do, nothing reaches the Pis and the mapper reports `EHOSTUNREACH`.
+- **A panel sends only when its output is on.** That is the fixture's **Enabled** switch in Chromatik, or a panel's **Output** switch inside the `TelecortexDomeUpper` fixture. A panel with no Pi yet sits on `127.0.0.1` channel 0 with output off, so it still shows in the preview. Turn on two panels that share a host and channel, and Chromatik reports `Output errors detected` with `collisions in channel 0`. Give each one a host and channel of its own first, or let the mapper build a project that does.
+- **One address repeating `No route to host`** in Chromatik's log means that Pi is off or off the network. Check it with `ping`.
 - **Licence.** Chromatik's FREE licence only sends network output for models of 1,000 points or fewer. A single panel or `TelecortexThreePanels` fits. Either whole dome needs a paid tier, though everything previews without one.
 
 ## Naming
@@ -61,7 +67,7 @@ Chromatik uses a fixture's file name as its type name, and a project stores that
 | `TelecortexPanelSmall` | One small (AAB) panel, likewise | 260 | OPC |
 | `TelecortexPanelLargeFlat` | A large panel laid flat, built from the `telecortex-opc-sender` config | 316 | OPC |
 | `TelecortexDomeOG` | The original 12-panel dome section, five hosts with four channels each | 3,288 | OPC |
-| `TelecortexDomeUpper` | The dome minus its bottom ring and the door: 18 panels, host and channel per panel | 4,960 | OPC |
+| `TelecortexDomeUpper` | The dome minus its bottom ring and the door: 18 panels, with a host, channel and output switch per panel | 4,960 | OPC |
 | `LEDPortalTriangle300` | LEDPortal 300-pixel triangle on a hex grid | 300 | sACN |
 
 ## Projects
@@ -70,7 +76,7 @@ Chromatik uses a fixture's file name as its type name, and a project stores that
 |---|---|
 | `TelecortexThreePanels` | BU, SLIU and SRIU, each its own panel fixture, addressed to the Pi that drives it |
 | `TelecortexDomeOG` | The `TelecortexDomeOG` fixture |
-| `TelecortexDomeUpperPanels` | The same 18 panels as `TelecortexDomeUpper`, each its own panel fixture |
+| `TelecortexDomeUpperPanels` | The same 18 panels as `TelecortexDomeUpper`, each its own panel fixture. Only BU, SLIU and SRIU send; the rest have output off until the mapper builds a project |
 
 Placing each panel as its own fixture is what lets the Panel Transforms effect in [chromatik-plugins](https://github.com/moonbase-labs/chromatik-plugins) rotate one panel at a time during calibration.
 
@@ -100,5 +106,5 @@ To try it without hardware, run `bun mapper/fake-pi.ts 42070 42071` and copy the
 
 - Units are millimetres, and z is up.
 - Plan view: +x is east, +y is north. The door is the 5-way hub due south, opposite BU.
-- Each Raspberry Pi is addressed as `<balena device name>.local`, e.g. `lingering-brook.local`. Each has four outputs, OPC channels 0 to 3. quiet-hill has not been renamed yet, so it is still addressed by IP.
+- Each Raspberry Pi is addressed as `<balena device name>.local`, e.g. `lingering-brook.local`. Each has four outputs, OPC channels 0 to 3. quiet-hill has not been renamed yet, so it is still addressed by IP, 192.168.1.105. `TelecortexDomeOG` still names two Pis that never were, still-brook and damp-frog, so their panels stay dark until those hosts are set.
 - The original 12 panels keep their TeleCortex OG names (BU, BRD, SLIU, ...). Panels added since are named by compass point: BSE is the big south-east panel, SEN the small panel at the east hub on its north side.

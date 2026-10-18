@@ -141,6 +141,7 @@ test("the built project points each mapped panel at its output, turned as mounte
   const project = await Bun.file(built.path).json();
   const fixture = project.model.fixtures.find((f: any) => f.parameters.tags.endsWith(",bse"));
   expect(fixture.jsonParameters).toMatchObject({ host: "pi-a.local", port: 42069, opcChannel: 0 });
+  expect(fixture.parameters.enabled).toBe(true);
   const slot = slotById(dome, "bse");
   const placed = applyTransform(dome.panels.large, fixture.parameters);
   expect(Math.max(...placed.map((p, i) => length(sub(p, placement(slot, 1)[i]))))).toBeLessThan(0.05);
@@ -148,4 +149,17 @@ test("the built project points each mapped panel at its output, turned as mounte
   const other = project.model.fixtures.find((f: any) => f.parameters.tags.endsWith(",bu"));
   expect(other.parameters.tags).toBe("telecortex,og,large,unmapped,bu");
   expect(other.jsonParameters.host).toBe("127.0.0.1");
+  expect(other.parameters.enabled).toBe(false);
+
+  // Unmapped panels all sit on 127.0.0.1 channel 0, so only output that is switched off avoids a collision.
+  const sending = project.model.fixtures.filter((f: any) => f.parameters.enabled);
+  const addresses = sending.map((f: any) => `${f.jsonParameters.host}:${f.jsonParameters.port}/${f.jsonParameters.opcChannel}`);
+  expect(new Set(addresses).size).toBe(addresses.length);
+});
+
+test("the template project only sends to panels that have a Pi of their own", async () => {
+  const project = await Bun.file(join(root, "projects", "TelecortexDomeUpperPanels.lxp")).json();
+  for (const fixture of project.model.fixtures) {
+    expect(fixture.parameters.enabled).toBe(fixture.jsonParameters.host !== "127.0.0.1");
+  }
 });

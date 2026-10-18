@@ -14,7 +14,7 @@
     },
     "hostQH": {
       "type": "string",
-      "default": "quiet-hill",
+      "default": "192.168.1.105",
       "label": "Quiet Hill",
       "description": "OPC hostname/IP for quiet-hill"
     },

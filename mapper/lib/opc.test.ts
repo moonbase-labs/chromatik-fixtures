@@ -10,7 +10,7 @@ test("an OPC packet is channel, command 0, big-endian length, then colours", () 
 });
 
 test("hosts take an optional port, defaulting to OPC's 42069", () => {
-  expect(splitHost("lingering-brook.local")).toEqual({ name: "lingering-brook.local", port: 42069 });
+  expect(splitHost("frosty-frost.local")).toEqual({ name: "frosty-frost.local", port: 42069 });
   expect(splitHost("127.0.0.1:42070")).toEqual({ name: "127.0.0.1", port: 42070 });
 });
 

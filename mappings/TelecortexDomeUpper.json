@@ -2,28 +2,28 @@
   "layout": "TelecortexDomeUpper",
   "pis": [
     {
-      "name": "lingering-brook",
-      "host": "lingering-brook.local",
+      "name": "frosty-frost",
+      "host": "frosty-frost.local",
       "channels": 4
     },
     {
-      "name": "cold-thunder",
-      "host": "cold-thunder.local",
+      "name": "large-starfish",
+      "host": "large-starfish.local",
       "channels": 4
     },
     {
-      "name": "snowy-breakfast",
-      "host": "snowy-breakfast.local",
+      "name": "pretty-violet",
+      "host": "pretty-violet.local",
       "channels": 4
     },
     {
-      "name": "quiet-hill",
-      "host": "192.168.1.105",
+      "name": "small-castle",
+      "host": "small-castle.local",
       "channels": 4
     },
     {
-      "name": "fierce-notebook",
-      "host": "4258cc5.local",
+      "name": "red-mountain",
+      "host": "red-mountain.local",
       "channels": 4
     }
   ],

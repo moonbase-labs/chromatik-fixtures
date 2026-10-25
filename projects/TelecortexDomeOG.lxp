@@ -81,9 +81,9 @@
       {
         "jsonFixtureType": "TelecortexDomeOG",
         "jsonParameters": {
-          "hostLB": "lingering-brook.local",
-          "hostQH": "192.168.1.105",
-          "hostCT": "cold-thunder.local",
+          "hostFF": "frosty-frost.local",
+          "hostSC": "small-castle.local",
+          "hostLS": "large-starfish.local",
           "hostSB": "still-brook",
           "hostDF": "damp-frog",
           "port": 42069,

@@ -81,7 +81,7 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "lingering-brook.local",
+          "host": "frosty-frost.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"
@@ -119,7 +119,7 @@
       {
         "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
-          "host": "snowy-breakfast.local",
+          "host": "pretty-violet.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"
@@ -157,7 +157,7 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "192.168.1.105",
+          "host": "small-castle.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"

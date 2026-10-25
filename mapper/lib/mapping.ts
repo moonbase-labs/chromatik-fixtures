@@ -37,12 +37,11 @@ export interface Output {
 }
 
 export const DEFAULT_PIS: Pi[] = [
-  { name: "lingering-brook", host: "lingering-brook.local", channels: 4 },
-  { name: "cold-thunder", host: "cold-thunder.local", channels: 4 },
-  { name: "snowy-breakfast", host: "snowy-breakfast.local", channels: 4 },
-  // Not renamed yet, so addressed by IP like everywhere else in this repo.
-  { name: "quiet-hill", host: "192.168.1.105", channels: 4 },
-  { name: "fierce-notebook", host: "4258cc5.local", channels: 4 },
+  { name: "frosty-frost", host: "frosty-frost.local", channels: 4 },
+  { name: "large-starfish", host: "large-starfish.local", channels: 4 },
+  { name: "pretty-violet", host: "pretty-violet.local", channels: 4 },
+  { name: "small-castle", host: "small-castle.local", channels: 4 },
+  { name: "red-mountain", host: "red-mountain.local", channels: 4 },
 ];
 
 export const outputKey = (pi: string, channel: number) => `${pi}:${channel}`;

@@ -30,6 +30,14 @@ Nothing is installed from npm, and from now on a `git pull` updates what Chromat
 - **Mac or Linux:** `curl -fsSL https://bun.sh/install | bash`
 - **Windows:** `powershell -c "irm bun.sh/install.ps1 | iex"`
 
+After installing on Windows, open a new terminal so `bun` is on `PATH`.
+If `bun` still isn't found in the current shell, run it directly once:
+
+```powershell
+& "$env:USERPROFILE\.bun\bin\bun.exe" --version
+& "$env:USERPROFILE\.bun\bin\bun.exe" scripts/link-chromatik.ts
+```
+
 </details>
 
 <details>

@@ -68,6 +68,10 @@ It turns Chromatik's `Fixtures`, `Projects` and `Scripts` folders into links to 
 
 Video, Shader and the other Laserphile patterns come from [chromatik-plugins](https://github.com/moonbase-labs/chromatik-plugins). You don't need them to open these projects.
 
+### The upper dome
+
+![The upper dome seen from below, each panel coloured by the Pi that drives it](docs/dome-map.svg)
+
 ## 🗺️ Mapping the dome on site
 
 Panels go into the scaffold in any order and plug into whichever Pi output is nearest. The mapper works out which output feeds each panel, and which way round each large panel was mounted.
@@ -81,7 +85,7 @@ Panels go into the scaffold in any order and plug into whichever Pi output is ne
 2. **Open the printed address on a phone** on the dome's network, and stand under the dome.
 3. **For each output:** tap the panel that lit, tap its red corner, then confirm green and blue are where the map shows them. Tap **Nothing lit** if the output is unused.
 4. **Check whole dome.** Colour should sweep smoothly round the compass, brighter lower down. A panel that breaks the pattern is in the wrong place or turned wrong: redo it from the output list.
-5. **Build project.** This writes `projects/TelecortexDomeUpperMapped.lxp`. Commit and push it, along with `mappings/TelecortexDomeUpper.json`, so everyone gets the dome as installed.
+5. **Build project.** This writes `projects/TelecortexDomeUpperMapped.lxp`. Redraw the map above with `bun mapper/draw-map.ts --project projects/TelecortexDomeUpperMapped.lxp`, then commit and push both, along with `mappings/TelecortexDomeUpper.json`, so everyone gets the dome as installed.
 
 > [!TIP]
 > **Light everything** shows each Pi's panels in that Pi's colour. A dark panel isn't getting through, and a panel in the wrong colour is plugged into a different Pi.

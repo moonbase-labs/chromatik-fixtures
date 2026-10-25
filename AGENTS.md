@@ -37,6 +37,7 @@ scripts/    setup helpers, e.g. link-chromatik.ts
 - `bun test` runs the mapper's tests.
 - To try it without hardware: run `bun mapper/fake-pi.ts 42070 42071`, copy the mapping to `mappings/Test.json`, and change its first two Pis' hosts to `127.0.0.1:42070` and `127.0.0.1:42071`. Then run `bun mapper/server.ts --mapping mappings/Test.json`. A project is named after its mapping, so this builds `projects/TestMapped.lxp` and leaves the real one alone.
 - The Pis the mapper tries are listed in the mapping JSON. Edit it if a Pi's host changes.
+- `bun mapper/draw-map.ts` draws `docs/dome-map.svg`, the README's map, from a project (the template by default) as seen from below. The current copy was drawn with `--wired bu,sliu,sriu` to outline the three panels on real outputs; after mapping, draw from `projects/TelecortexDomeUpperMapped.lxp` without it. Pi colours follow the order of Pis in the mapping and were validated as a set of five, so a sixth Pi needs a new colour.
 
 ## Related repo
 

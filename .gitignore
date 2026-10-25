@@ -7,7 +7,6 @@ fixtures/Examples/
 projects/Examples/
 scripts/Examples/
 
-# Video clips are too big for git; only the small demo clip is committed
-videos/*
-!videos/README.md
-!videos/demo-bars.mp4
+# Video clips are too big for git: videos/ is a local folder or a link to cloud storage
+/videos
+/videos.bak.*

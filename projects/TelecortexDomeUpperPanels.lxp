@@ -81,9 +81,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "frosty-frost.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 1,
           "transport": "udp"
         },
         "id": 53714,
@@ -106,7 +106,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -119,7 +119,7 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "large-starfish.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"
@@ -144,7 +144,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -157,9 +157,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "pretty-violet.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 1,
           "transport": "udp"
         },
         "id": 53716,
@@ -182,7 +182,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -195,9 +195,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "small-castle.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 1,
           "transport": "udp"
         },
         "id": 53717,
@@ -220,7 +220,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -233,7 +233,7 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "red-mountain.local",
           "port": 42069,
           "opcChannel": 0,
           "transport": "udp"
@@ -258,7 +258,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -347,9 +347,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "frosty-frost.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 2,
           "transport": "udp"
         },
         "id": 53721,
@@ -372,7 +372,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -385,9 +385,9 @@
       {
         "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "large-starfish.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 1,
           "transport": "udp"
         },
         "id": 53722,
@@ -410,7 +410,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -423,9 +423,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "pretty-violet.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 2,
           "transport": "udp"
         },
         "id": 53723,
@@ -448,7 +448,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -461,9 +461,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "small-castle.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 2,
           "transport": "udp"
         },
         "id": 53724,
@@ -486,7 +486,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -499,9 +499,9 @@
       {
         "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "red-mountain.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 1,
           "transport": "udp"
         },
         "id": 53725,
@@ -524,7 +524,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -537,9 +537,9 @@
       {
         "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "frosty-frost.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 3,
           "transport": "udp"
         },
         "id": 53726,
@@ -562,7 +562,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -575,9 +575,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "large-starfish.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 2,
           "transport": "udp"
         },
         "id": 53727,
@@ -600,7 +600,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -613,9 +613,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "pretty-violet.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 3,
           "transport": "udp"
         },
         "id": 53728,
@@ -638,7 +638,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -651,9 +651,9 @@
       {
         "jsonFixtureType": "TelecortexPanelLarge",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "small-castle.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 3,
           "transport": "udp"
         },
         "id": 53729,
@@ -676,7 +676,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,
@@ -689,9 +689,9 @@
       {
         "jsonFixtureType": "TelecortexPanelSmall",
         "jsonParameters": {
-          "host": "127.0.0.1",
+          "host": "red-mountain.local",
           "port": 42069,
-          "opcChannel": 0,
+          "opcChannel": 2,
           "transport": "udp"
         },
         "id": 53730,
@@ -714,7 +714,7 @@
           "pointSize": 22,
           "selected": false,
           "deactivate": false,
-          "enabled": false,
+          "enabled": true,
           "brightness": 1,
           "identify": false,
           "mute": false,

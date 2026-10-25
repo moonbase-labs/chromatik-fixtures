@@ -8,13 +8,13 @@
   "parameters": {
     "hostSAD": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "frosty-frost.local",
       "label": "SAD Host",
       "description": "OPC hostname/IP for panel SAD"
     },
     "channelSAD": {
       "type": "int",
-      "default": 0,
+      "default": 1,
       "min": 0,
       "max": 255,
       "label": "SAD Channel",
@@ -22,13 +22,13 @@
     },
     "outputSAD": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SAD Output",
       "description": "Send to panel SAD. Off until it has a host and channel of its own"
     },
     "hostSARD": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "large-starfish.local",
       "label": "SARD Host",
       "description": "OPC hostname/IP for panel SARD"
     },
@@ -42,19 +42,19 @@
     },
     "outputSARD": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SARD Output",
       "description": "Send to panel SARD. Off until it has a host and channel of its own"
     },
     "hostSARU": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "pretty-violet.local",
       "label": "SARU Host",
       "description": "OPC hostname/IP for panel SARU"
     },
     "channelSARU": {
       "type": "int",
-      "default": 0,
+      "default": 1,
       "min": 0,
       "max": 255,
       "label": "SARU Channel",
@@ -62,19 +62,19 @@
     },
     "outputSARU": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SARU Output",
       "description": "Send to panel SARU. Off until it has a host and channel of its own"
     },
     "hostSALU": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "small-castle.local",
       "label": "SALU Host",
       "description": "OPC hostname/IP for panel SALU"
     },
     "channelSALU": {
       "type": "int",
-      "default": 0,
+      "default": 1,
       "min": 0,
       "max": 255,
       "label": "SALU Channel",
@@ -82,13 +82,13 @@
     },
     "outputSALU": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SALU Output",
       "description": "Send to panel SALU. Off until it has a host and channel of its own"
     },
     "hostSALD": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "red-mountain.local",
       "label": "SALD Host",
       "description": "OPC hostname/IP for panel SALD"
     },
@@ -102,7 +102,7 @@
     },
     "outputSALD": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SALD Output",
       "description": "Send to panel SALD. Off until it has a host and channel of its own"
     },
@@ -148,13 +148,13 @@
     },
     "hostSLU": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "frosty-frost.local",
       "label": "SLU Host",
       "description": "OPC hostname/IP for panel SLU"
     },
     "channelSLU": {
       "type": "int",
-      "default": 0,
+      "default": 2,
       "min": 0,
       "max": 255,
       "label": "SLU Channel",
@@ -162,19 +162,19 @@
     },
     "outputSLU": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SLU Output",
       "description": "Send to panel SLU. Off until it has a host and channel of its own"
     },
     "hostBRD": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "large-starfish.local",
       "label": "BRD Host",
       "description": "OPC hostname/IP for panel BRD"
     },
     "channelBRD": {
       "type": "int",
-      "default": 0,
+      "default": 1,
       "min": 0,
       "max": 255,
       "label": "BRD Channel",
@@ -182,19 +182,19 @@
     },
     "outputBRD": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "BRD Output",
       "description": "Send to panel BRD. Off until it has a host and channel of its own"
     },
     "hostSEN": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "pretty-violet.local",
       "label": "SEN Host",
       "description": "OPC hostname/IP for panel SEN"
     },
     "channelSEN": {
       "type": "int",
-      "default": 0,
+      "default": 2,
       "min": 0,
       "max": 255,
       "label": "SEN Channel",
@@ -202,19 +202,19 @@
     },
     "outputSEN": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SEN Output",
       "description": "Send to panel SEN. Off until it has a host and channel of its own"
     },
     "hostSES": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "small-castle.local",
       "label": "SES Host",
       "description": "OPC hostname/IP for panel SES"
     },
     "channelSES": {
       "type": "int",
-      "default": 0,
+      "default": 2,
       "min": 0,
       "max": 255,
       "label": "SES Channel",
@@ -222,19 +222,19 @@
     },
     "outputSES": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SES Output",
       "description": "Send to panel SES. Off until it has a host and channel of its own"
     },
     "hostBSE": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "red-mountain.local",
       "label": "BSE Host",
       "description": "OPC hostname/IP for panel BSE"
     },
     "channelBSE": {
       "type": "int",
-      "default": 0,
+      "default": 1,
       "min": 0,
       "max": 255,
       "label": "BSE Channel",
@@ -242,19 +242,19 @@
     },
     "outputBSE": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "BSE Output",
       "description": "Send to panel BSE. Off until it has a host and channel of its own"
     },
     "hostBSW": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "frosty-frost.local",
       "label": "BSW Host",
       "description": "OPC hostname/IP for panel BSW"
     },
     "channelBSW": {
       "type": "int",
-      "default": 0,
+      "default": 3,
       "min": 0,
       "max": 255,
       "label": "BSW Channel",
@@ -262,19 +262,19 @@
     },
     "outputBSW": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "BSW Output",
       "description": "Send to panel BSW. Off until it has a host and channel of its own"
     },
     "hostSWS": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "large-starfish.local",
       "label": "SWS Host",
       "description": "OPC hostname/IP for panel SWS"
     },
     "channelSWS": {
       "type": "int",
-      "default": 0,
+      "default": 2,
       "min": 0,
       "max": 255,
       "label": "SWS Channel",
@@ -282,19 +282,19 @@
     },
     "outputSWS": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SWS Output",
       "description": "Send to panel SWS. Off until it has a host and channel of its own"
     },
     "hostSWN": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "pretty-violet.local",
       "label": "SWN Host",
       "description": "OPC hostname/IP for panel SWN"
     },
     "channelSWN": {
       "type": "int",
-      "default": 0,
+      "default": 3,
       "min": 0,
       "max": 255,
       "label": "SWN Channel",
@@ -302,19 +302,19 @@
     },
     "outputSWN": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SWN Output",
       "description": "Send to panel SWN. Off until it has a host and channel of its own"
     },
     "hostBLD": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "small-castle.local",
       "label": "BLD Host",
       "description": "OPC hostname/IP for panel BLD"
     },
     "channelBLD": {
       "type": "int",
-      "default": 0,
+      "default": 3,
       "min": 0,
       "max": 255,
       "label": "BLD Channel",
@@ -322,19 +322,19 @@
     },
     "outputBLD": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "BLD Output",
       "description": "Send to panel BLD. Off until it has a host and channel of its own"
     },
     "hostSRU": {
       "type": "string",
-      "default": "127.0.0.1",
+      "default": "red-mountain.local",
       "label": "SRU Host",
       "description": "OPC hostname/IP for panel SRU"
     },
     "channelSRU": {
       "type": "int",
-      "default": 0,
+      "default": 2,
       "min": 0,
       "max": 255,
       "label": "SRU Channel",
@@ -342,7 +342,7 @@
     },
     "outputSRU": {
       "type": "boolean",
-      "default": false,
+      "default": true,
       "label": "SRU Output",
       "description": "Send to panel SRU. Off until it has a host and channel of its own"
     },

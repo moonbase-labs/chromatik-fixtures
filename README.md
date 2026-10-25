@@ -17,7 +17,7 @@ You need [Chromatik](https://chromatik.co/), [Bun](https://bun.sh/) and git. Sta
 ```bash
 git clone https://github.com/moonbase-labs/chromatik-fixtures.git
 cd chromatik-fixtures
-bun scripts/link-chromatik.ts
+bun scripts/link-chromatik.ts   # links Chromatik's folders to this repo
 ```
 
 Then in Chromatik, open **Projects → TelecortexThreePanels**.
@@ -33,12 +33,17 @@ Nothing is installed from npm, and from now on a `git pull` updates what Chromat
 </details>
 
 <details>
-<summary><b>What the link script does</b></summary>
+<summary><b>The link script</b></summary>
 
-It turns `~/Chromatik/Fixtures`, `Projects` and `Scripts` into links to this repo's `fixtures/`, `projects/` and `scripts/`, so Chromatik loads from the repo and saves back into it.
+```bash
+bun scripts/link-chromatik.ts                      # links ~/Chromatik
+bun scripts/link-chromatik.ts /path/to/Chromatik   # or another Chromatik folder
+```
+
+It turns Chromatik's `Fixtures`, `Projects` and `Scripts` folders into links to this repo's `fixtures/`, `projects/` and `scripts/`, so Chromatik loads from the repo and saves back into it.
 
 - Anything already in those folders is kept, renamed to `<Name>.bak.<date-time>`.
-- It's safe to re-run. Pass a path to use a different Chromatik folder.
+- It's safe to re-run.
 - To undo it, delete the link and rename the `.bak` folder back.
 - On Windows the links are directory junctions, so Developer Mode isn't needed.
 

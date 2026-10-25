@@ -53,6 +53,7 @@ Plugins (Video, Shader, Panel Transforms, MCP) live in [moonbase-labs/chromatik-
 - The old fleet, `gh_vanbujm/moonbase-cortex` (id 1466494, 32-bit `raspberrypi3`), is retired. Matched by eth0 MAC: lingering-brook is now frosty-frost, cold-thunder is large-starfish, snowy-breakfast is pretty-violet, and quiet-hill and fierce-notebook (one Pi registered twice) are small-castle. red-mountain is new hardware.
 - Use the balena CLI: `brew install balena-cli`, then `balena login --web`. The Homebrew build runs on Node 26 and warns that it wants Node 24; it still works.
 - The images are production, so SSH to a Pi's host OS needs a key on the balena account.
+- Wi-Fi is disabled on every Pi through the fleet's `RESIN_HOST_CONFIG_dtoverlay` config var (`disable-wifi`), so they are wired only. The site network, addresses and the phone tether are in [`docs/ON-SITE.md`](docs/ON-SITE.md).
 
 ## Adding or reflashing a Pi
 

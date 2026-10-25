@@ -110,6 +110,8 @@ Progress saves after every tap, so restarting the mapper picks up where it left 
 
 ## 🛠️ Troubleshooting
 
+The dome's network, the Pis' addresses and the phone tether are in [docs/ON-SITE.md](docs/ON-SITE.md).
+
 <details>
 <summary><b>Nothing reaches the Pis</b></summary>
 

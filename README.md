@@ -40,9 +40,9 @@ bun scripts/link-chromatik.ts                      # links ~/Chromatik
 bun scripts/link-chromatik.ts /path/to/Chromatik   # or another Chromatik folder
 ```
 
-It turns Chromatik's `Fixtures`, `Projects` and `Scripts` folders into links to this repo's `fixtures/`, `projects/` and `scripts/`, so Chromatik loads from the repo and saves back into it.
+It turns Chromatik's `Fixtures`, `Projects` and `Scripts` folders into links to this repo's `fixtures/`, `projects/` and `scripts/`, and the Video pattern's `LaserphileVideo` folder into a link to `videos/`, so Chromatik loads from the repo and saves back into it.
 
-- Anything already in those folders is kept, renamed to `<Name>.bak.<date-time>`.
+- Anything already in those folders is kept, renamed to `<Name>.bak.<date-time>`. Move any clips from `LaserphileVideo.bak.…` into `videos/`.
 - It's safe to re-run.
 - To undo it, delete the link and rename the `.bak` folder back.
 - On Windows the links are directory junctions, so Developer Mode isn't needed.
@@ -71,6 +71,12 @@ Video, Shader and the other Laserphile patterns come from [chromatik-plugins](ht
 ### The upper dome
 
 ![The upper dome seen from below, each panel coloured by the Pi that drives it](docs/dome-map.svg)
+
+## 🎞️ Videos
+
+Put clips in `videos/`. The link script makes it Chromatik's `LaserphileVideo` folder, so a clip picked from there with the Video pattern's **Browse** is saved as `LaserphileVideo/<clip>`, which works on any machine.
+
+Clips are too big for git, so copy them in yourself. [`videos/README.md`](videos/README.md) lists the ones the projects use.
 
 ## 🗺️ Mapping the dome on site
 

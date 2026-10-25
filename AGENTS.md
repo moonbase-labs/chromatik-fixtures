@@ -10,11 +10,14 @@ projects/   .lxp Chromatik projects built from them
 mapper/     on-site tool that works out which Pi output feeds which panel (Bun, TypeScript)
 mappings/   which output feeds which panel, written by the mapper
 scripts/    setup helpers, e.g. link-chromatik.ts
+videos/     clips for the Video pattern, linked as ~/Chromatik/LaserphileVideo; only demo-bars.mp4 is committed
+docs/       the README's dome map, drawn by mapper/draw-map.ts
 ```
 
 ## Conventions
 
 - Files are named `<Rig><Part><Variant>` in PascalCase, e.g. `TelecortexPanelLarge`.
+- Projects refer to clips as `LaserphileVideo/<clip>`, never by absolute path, so they resolve on any machine that has run the link script. `demo-bars.mp4` is a copy of the test clip from chromatik-plugins.
 - A fixture's file name is its type name, and every project stores it (`jsonFixtureType` and `fixtureType`). Renaming a fixture means updating every project that uses it. The link script links whole folders, not files, for the same reason.
 - Units are millimetres, z is up. Plan view: +x is east, +y is north. The door is the 5-way hub due south, opposite BU.
 - The original 12 panels keep their TeleCortex OG names (BU, BRD, SLIU, ...). Panels added since are named by compass point: BSE is the big south-east panel, SEN the small panel at the east hub on its north side.

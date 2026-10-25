@@ -38,6 +38,7 @@ Nothing is installed from npm, and from now on a `git pull` updates what Chromat
 ```bash
 bun scripts/link-chromatik.ts                      # links ~/Chromatik
 bun scripts/link-chromatik.ts /path/to/Chromatik   # or another Chromatik folder
+bun scripts/link-chromatik.ts --videos "/path"     # and keep the videos in another folder
 ```
 
 It turns Chromatik's `Fixtures`, `Projects` and `Scripts` folders into links to this repo's `fixtures/`, `projects/` and `scripts/`, and the Video pattern's `LaserphileVideo` folder into a link to `videos/`, so Chromatik loads from the repo and saves back into it.
@@ -74,9 +75,18 @@ Video, Shader and the other Laserphile patterns come from [chromatik-plugins](ht
 
 ## 🎞️ Videos
 
-Put clips in `videos/`. The link script makes it Chromatik's `LaserphileVideo` folder, so a clip picked from there with the Video pattern's **Browse** is saved as `LaserphileVideo/<clip>`, which works on any machine.
+Clips are too big for git, so keep them in a cloud storage folder (Google Drive, Dropbox, OneDrive, ...) and give the link script its path:
 
-Clips are too big for git, so copy them in yourself. [`videos/README.md`](videos/README.md) lists the ones the projects use.
+```bash
+bun scripts/link-chromatik.ts --videos "/path/to/your/cloud/videos"
+```
+
+That links `videos/` to your cloud folder, and Chromatik's `LaserphileVideo` folder to `videos/`. A clip picked from there with the Video pattern's **Browse** is saved as `LaserphileVideo/<clip>`, so projects work on any machine. Without `--videos`, `videos/` is a plain local folder.
+
+The projects use `221903.mp4`, `Track day at DRM.mp4` and [`demo-bars.mp4`](https://github.com/moonbase-labs/chromatik-plugins/raw/main/packages/chromatik-video/projects/demo-bars.mp4).
+
+> [!IMPORTANT]
+> There's no internet on site. Set the cloud folder to stay downloaded on the show laptop (e.g. **Available offline**) before you go.
 
 ## 🗺️ Mapping the dome on site
 

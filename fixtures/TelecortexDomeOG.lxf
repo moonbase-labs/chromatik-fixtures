@@ -24,17 +24,17 @@
       "label": "Large Starfish",
       "description": "OPC hostname/IP for large-starfish"
     },
-    "hostSB": {
+    "hostPV": {
       "type": "string",
-      "default": "still-brook",
-      "label": "Still Brook",
-      "description": "OPC hostname/IP for still-brook"
+      "default": "pretty-violet.local",
+      "label": "Pretty Violet",
+      "description": "OPC hostname/IP for pretty-violet"
     },
-    "hostDF": {
+    "hostRM": {
       "type": "string",
-      "default": "damp-frog",
-      "label": "Damp Frog",
-      "description": "OPC hostname/IP for damp-frog"
+      "default": "red-mountain.local",
+      "label": "Red Mountain",
+      "description": "OPC hostname/IP for red-mountain"
     },
     "port": {
       "type": "int",
@@ -56,7 +56,7 @@
     "layout": "telecortex-og",
     "led_count": "3288",
     "panel_count": "12",
-    "hosts": "frosty-frost,small-castle,large-starfish,still-brook,damp-frog",
+    "hosts": "frosty-frost,small-castle,large-starfish,pretty-violet,red-mountain",
     "units": "mm",
     "up_axis": "z",
     "transform": "Y-up blender -> Z-up via +90deg X (x,y,z)->(x,-z,y)"
@@ -6949,7 +6949,7 @@
         "SLU",
         "small",
         "og",
-        "still-brook"
+        "pretty-violet"
       ],
       "coords": [
         {
@@ -8255,7 +8255,7 @@
       ],
       "output": {
         "protocol": "opc",
-        "host": "$hostSB",
+        "host": "$hostPV",
         "port": "$port",
         "channel": 0,
         "transport": "$transport",
@@ -8269,7 +8269,7 @@
         "SAD",
         "small",
         "og",
-        "still-brook"
+        "pretty-violet"
       ],
       "coords": [
         {
@@ -9575,7 +9575,7 @@
       ],
       "output": {
         "protocol": "opc",
-        "host": "$hostSB",
+        "host": "$hostPV",
         "port": "$port",
         "channel": 3,
         "transport": "$transport",
@@ -9589,7 +9589,7 @@
         "BU",
         "big",
         "og",
-        "still-brook"
+        "pretty-violet"
       ],
       "coords": [
         {
@@ -11175,7 +11175,7 @@
       ],
       "output": {
         "protocol": "opc",
-        "host": "$hostSB",
+        "host": "$hostPV",
         "port": "$port",
         "channel": 2,
         "transport": "$transport",
@@ -15429,7 +15429,7 @@
         "SALU",
         "small",
         "og",
-        "damp-frog"
+        "red-mountain"
       ],
       "coords": [
         {
@@ -16735,7 +16735,7 @@
       ],
       "output": {
         "protocol": "opc",
-        "host": "$hostDF",
+        "host": "$hostRM",
         "port": "$port",
         "channel": 3,
         "transport": "$transport",

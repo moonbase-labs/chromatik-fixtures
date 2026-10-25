@@ -84,8 +84,8 @@
           "hostFF": "frosty-frost.local",
           "hostSC": "small-castle.local",
           "hostLS": "large-starfish.local",
-          "hostSB": "still-brook",
-          "hostDF": "damp-frog",
+          "hostPV": "pretty-violet.local",
+          "hostRM": "red-mountain.local",
           "port": 42069,
           "transport": "udp"
         },

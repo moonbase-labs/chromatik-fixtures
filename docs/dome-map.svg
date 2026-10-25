@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 1136" width="980" height="1136" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <style>
+    .title { font-size: 26px; font-weight: 700; fill: #0b0b0b; }
+    .subtitle { font-size: 15px; fill: #52514e; }
+    .panel { font-size: 15px; font-weight: 700; fill: #0b0b0b; text-anchor: middle; }
+    .output { font-size: 11.5px; fill: #0b0b0b; text-anchor: middle; }
+    .compass { font-size: 16px; font-weight: 700; fill: #52514e; text-anchor: middle; }
+    .header { font-size: 13px; font-weight: 700; fill: #52514e; }
+    .cell { font-size: 14px; fill: #0b0b0b; }
+    .spare { fill: #52514e; }
+  </style>
+  <rect width="980" height="1136" fill="#fcfcfb"/>
+  <text x="40" y="52" class="title">TeleCortex upper dome, seen from below</text>
+  <text x="40" y="80" class="subtitle">Default Pi outputs. Thick outline = real wiring (BU, SLIU, SRIU); the rest are placeholders until the mapper runs.</text>
+  
+  <text x="490" y="132" class="compass">N</text>
+  <text x="82.4" y="481.7" class="compass">E</text>
+  <text x="897.6" y="481.7" class="compass">W</text>
+  <path d="M 470.0 827.5 h 40" stroke="#52514e" stroke-width="3" stroke-linecap="round"/>
+  <text x="490.0" y="851.5" class="compass">DOOR (S)</text>
+  
+  <g>
+    <polygon points="490.0,503.2 381.7,353.6 598.3,353.6" fill="#2a78d6" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="490.0" y="397.4" class="panel">SAD</text>
+    <text x="490.0" y="414.4" class="output">frosty-frost 1</text>
+  </g>
+  <g>
+    <polygon points="483.4,508.0 307.6,564.7 374.5,358.8" fill="#d4b000" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="386.6" y="472.5" class="panel">SARD</text>
+    <text x="386.6" y="489.5" class="output">large-starfish 0</text>
+  </g>
+  <g>
+    <polygon points="485.9,515.7 485.6,700.4 310.4,573.2" fill="#c2457f" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="426.1" y="594.1" class="panel">SARU</text>
+    <text x="426.1" y="611.1" class="output">pretty-violet 1</text>
+  </g>
+  <g>
+    <polygon points="494.1,515.7 669.6,573.2 494.4,700.4" fill="#1baf7a" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="553.9" y="594.1" class="panel">SALU</text>
+    <text x="553.9" y="611.1" class="output">small-castle 1</text>
+  </g>
+  <g>
+    <polygon points="496.6,508.0 605.5,358.8 672.4,564.7" fill="#eb6834" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="593.4" y="472.5" class="panel">SALD</text>
+    <text x="593.4" y="489.5" class="output">red-mountain 0</text>
+  </g>
+  <g>
+    <polygon points="490.0,150.0 599.0,342.8 381.0,342.8" fill="#c2457f" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    <polygon points="490.0,150.0 599.0,342.8 381.0,342.8" fill="none" stroke="#0b0b0b" stroke-width="4" stroke-linejoin="round"/>
+    <text x="490.0" y="269.6" class="panel">BU</text>
+    <text x="490.0" y="286.6" class="output">pretty-violet 0</text>
+  </g>
+  <g>
+    <polygon points="265.4,192.4 481.6,151.8 373.5,342.2" fill="#2a78d6" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    <polygon points="265.4,192.4 481.6,151.8 373.5,342.2" fill="none" stroke="#0b0b0b" stroke-width="4" stroke-linejoin="round"/>
+    <text x="370.3" y="219.5" class="panel">SLIU</text>
+    <text x="370.3" y="236.5" class="output">frosty-frost 0</text>
+  </g>
+  <g>
+    <polygon points="257.3,198.3 366.3,347.4 151.8,391.4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="254.4" y="303.7" class="panel">SLU</text>
+    <text x="254.4" y="320.7" class="output">frosty-frost 2</text>
+  </g>
+  <g>
+    <polygon points="147.5,398.8 364.6,354.7 297.2,562.1" fill="#d4b000" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="265.0" y="433.0" class="panel">BRD</text>
+    <text x="265.0" y="450.0" class="output">large-starfish 1</text>
+  </g>
+  <g>
+    <polygon points="118.4,625.6 146.6,407.4 294.2,569.0" fill="#c2457f" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="180.4" y="531.4" class="panel">SEN</text>
+    <text x="180.4" y="548.4" class="output">pretty-violet 2</text>
+  </g>
+  <g>
+    <polygon points="121.5,635.1 297.0,577.5 272.6,795.1" fill="#1baf7a" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="224.6" y="667.7" class="panel">SES</text>
+    <text x="224.6" y="684.7" class="output">small-castle 2</text>
+  </g>
+  <g>
+    <polygon points="278.3,801.5 303.4,581.4 479.9,709.6" fill="#eb6834" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="350.9" y="697.5" class="panel">BSE</text>
+    <text x="350.9" y="714.5" class="output">red-mountain 1</text>
+  </g>
+  <g>
+    <polygon points="701.7,801.5 500.1,709.6 676.6,581.4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="629.1" y="697.5" class="panel">BSW</text>
+    <text x="629.1" y="714.5" class="output">frosty-frost 3</text>
+  </g>
+  <g>
+    <polygon points="858.5,635.1 707.4,795.1 683.0,577.5" fill="#d4b000" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="755.4" y="667.7" class="panel">SWS</text>
+    <text x="755.4" y="684.7" class="output">large-starfish 2</text>
+  </g>
+  <g>
+    <polygon points="861.6,625.6 685.8,569.0 833.4,407.4" fill="#c2457f" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="799.6" y="531.4" class="panel">SWN</text>
+    <text x="799.6" y="548.4" class="output">pretty-violet 3</text>
+  </g>
+  <g>
+    <polygon points="832.5,398.8 682.8,562.1 615.4,354.7" fill="#1baf7a" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="715.0" y="433.0" class="panel">BLD</text>
+    <text x="715.0" y="450.0" class="output">small-castle 3</text>
+  </g>
+  <g>
+    <polygon points="722.7,198.3 828.2,391.4 613.7,347.4" fill="#eb6834" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    
+    <text x="725.6" y="303.7" class="panel">SRU</text>
+    <text x="725.6" y="320.7" class="output">red-mountain 2</text>
+  </g>
+  <g>
+    <polygon points="714.6,192.4 606.5,342.2 498.4,151.8" fill="#1baf7a" stroke="#fcfcfb" stroke-width="4" stroke-linejoin="round"/>
+    <polygon points="714.6,192.4 606.5,342.2 498.4,151.8" fill="none" stroke="#0b0b0b" stroke-width="4" stroke-linejoin="round"/>
+    <text x="609.7" y="219.5" class="panel">SRIU</text>
+    <text x="609.7" y="236.5" class="output">small-castle 0</text>
+  </g>
+  <text x="94" y="921.5" class="header">Pi</text><text x="250" y="921.5" class="header">output 0</text><text x="400" y="921.5" class="header">output 1</text><text x="550" y="921.5" class="header">output 2</text><text x="700" y="921.5" class="header">output 3</text>
+  
+  <rect x="70" y="941.5" width="16" height="16" rx="4" fill="#2a78d6"/>
+  <text x="94" y="955.5" class="cell">frosty-frost</text>
+  <text x="250" y="955.5" class="cell" font-weight="700">SLIU</text><text x="400" y="955.5" class="cell">SAD</text><text x="550" y="955.5" class="cell">SLU</text><text x="700" y="955.5" class="cell">BSW</text>
+  <rect x="70" y="971.5" width="16" height="16" rx="4" fill="#d4b000"/>
+  <text x="94" y="985.5" class="cell">large-starfish</text>
+  <text x="250" y="985.5" class="cell">SARD</text><text x="400" y="985.5" class="cell">BRD</text><text x="550" y="985.5" class="cell">SWS</text><text x="700" y="985.5" class="cell spare">spare</text>
+  <rect x="70" y="1001.5" width="16" height="16" rx="4" fill="#c2457f"/>
+  <text x="94" y="1015.5" class="cell">pretty-violet</text>
+  <text x="250" y="1015.5" class="cell" font-weight="700">BU</text><text x="400" y="1015.5" class="cell">SARU</text><text x="550" y="1015.5" class="cell">SEN</text><text x="700" y="1015.5" class="cell">SWN</text>
+  <rect x="70" y="1031.5" width="16" height="16" rx="4" fill="#1baf7a"/>
+  <text x="94" y="1045.5" class="cell">small-castle</text>
+  <text x="250" y="1045.5" class="cell" font-weight="700">SRIU</text><text x="400" y="1045.5" class="cell">SALU</text><text x="550" y="1045.5" class="cell">SES</text><text x="700" y="1045.5" class="cell">BLD</text>
+  <rect x="70" y="1061.5" width="16" height="16" rx="4" fill="#eb6834"/>
+  <text x="94" y="1075.5" class="cell">red-mountain</text>
+  <text x="250" y="1075.5" class="cell">SALD</text><text x="400" y="1075.5" class="cell">BSE</text><text x="550" y="1075.5" class="cell">SRU</text><text x="700" y="1075.5" class="cell spare">spare</text>
+</svg>

@@ -64,7 +64,7 @@ It turns Chromatik's `Fixtures`, `Projects` and `Scripts` folders into links to 
 |---|---|
 | `TelecortexThreePanels` | Three panels, each on its own Pi. **Start here** |
 | `TelecortexDomeOG` | The original 12-panel section |
-| `TelecortexDomeUpperPanels` | The upper dome, one fixture per panel. Only three panels send until the dome is mapped |
+| `TelecortexDomeUpperPanels` | The upper dome, one fixture per panel. Panels are on placeholder Pi outputs until the dome is mapped |
 
 Video, Shader and the other Laserphile patterns come from [chromatik-plugins](https://github.com/moonbase-labs/chromatik-plugins). You don't need them to open these projects.
 
@@ -104,7 +104,7 @@ Progress saves after every tap, so restarting the mapper picks up where it left 
 
 A panel only sends when its output is on: the fixture's **Enabled** switch, or that panel's **Output** switch inside `TelecortexDomeUpper`.
 
-Panels with no Pi yet sit on `127.0.0.1` channel 0 with output off, so they still show in the preview. Turn two of them on and Chromatik reports `collisions in channel 0`. Give each one a host and channel of its own first, or let the mapper build a project.
+In a project the mapper built, panels it hasn't mapped yet sit on `127.0.0.1` channel 0 with output off, so they still show in the preview. Turn two of them on and Chromatik reports `collisions in channel 0`. Give each one a host and channel of its own first, or finish mapping them.
 
 </details>
 

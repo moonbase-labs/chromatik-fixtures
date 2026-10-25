@@ -20,6 +20,7 @@ scripts/    setup helpers, e.g. link-chromatik.ts
 - The original 12 panels keep their TeleCortex OG names (BU, BRD, SLIU, ...). Panels added since are named by compass point: BSE is the big south-east panel, SEN the small panel at the east hub on its north side.
 - A large panel fits three ways round, a small panel only one.
 - In the `*Panels` projects each panel is its own fixture, so the Panel Transforms effect in chromatik-plugins can rotate one at a time. The slot id is the last fixture tag (`telecortex,og,large,bu`), and the mapper relies on that.
+- In `TelecortexDomeUpper.lxf` and `TelecortexDomeUpperPanels.lxp`, only BU, SLIU and SRIU are on the outputs that really feed them. The other 15 panels were spread round-robin over the free outputs as placeholders until the mapper is run; the two files agree.
 - Each Pi has four outputs, OPC channels 0 to 3. `TelecortexDomeOG`'s five hosts are the five current Pis, but which panel each one drives there is historical; the mapper is the source of truth.
 
 ### Fixture details

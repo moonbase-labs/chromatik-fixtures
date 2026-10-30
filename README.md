@@ -109,7 +109,12 @@ Panels go into the scaffold in any order and plug into whichever Pi output is ne
 2. **Open the printed address on a phone** on the dome's network, and stand under the dome.
 3. **For each output:** tap the panel that lit, tap its red corner, then confirm green and blue are where the map shows them. Tap **Nothing lit** if the output is unused.
 4. **Check whole dome.** Colour should sweep smoothly round the compass, brighter lower down. A panel that breaks the pattern is in the wrong place or turned wrong: redo it from the output list.
-5. **Build project.** This writes `projects/TelecortexDomeUpperMapped.lxp`. Redraw the map above with `bun mapper/draw-map.ts --project projects/TelecortexDomeUpperMapped.lxp`, then commit and push both, along with `mappings/TelecortexDomeUpper.json`, so everyone gets the dome as installed.
+5. **Tap Build project** on the phone. Only then does `projects/TelecortexDomeUpperMapped.lxp` exist: the mapper writes it from the mapping, and the page confirms with *Wrote projects/TelecortexDomeUpperMapped.lxp*. Tapping it with panels still unmapped is fine; they stay on placeholder outputs and are listed in that message.
+6. **Redraw the map above** from the built project, then commit and push the project, the map and `mappings/TelecortexDomeUpper.json`, so everyone gets the dome as installed:
+
+   ```bash
+   bun mapper/draw-map.ts --project projects/TelecortexDomeUpperMapped.lxp
+   ```
 
 > [!TIP]
 > **Light everything** shows each Pi's panels in that Pi's colour. A dark panel isn't getting through, and a panel in the wrong colour is plugged into a different Pi.

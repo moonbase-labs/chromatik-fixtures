@@ -27,6 +27,74 @@
       "channels": 4
     }
   ],
-  "outputs": {},
-  "updated": "2026-10-10T09:13:30.487Z"
+  "outputs": {
+    "frosty-frost:0": {
+      "slot": "saru",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "frosty-frost:1": {
+      "slot": "salu",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "frosty-frost:2": "empty",
+    "frosty-frost:3": {
+      "slot": "slu",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "large-starfish:0": {
+      "slot": "sard",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "large-starfish:1": "empty",
+    "large-starfish:2": "empty",
+    "large-starfish:3": {
+      "slot": "sriu",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "pretty-violet:0": {
+      "slot": "bu",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "pretty-violet:1": "empty",
+    "pretty-violet:2": "empty",
+    "pretty-violet:3": "empty",
+    "small-castle:0": {
+      "slot": "brd",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "small-castle:1": {
+      "slot": "sliu",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "small-castle:2": {
+      "slot": "sru",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "small-castle:3": {
+      "slot": "bld",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "red-mountain:0": {
+      "slot": "sad",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "red-mountain:1": {
+      "slot": "sald",
+      "rotation": 0,
+      "check": "ok"
+    },
+    "red-mountain:3": "empty"
+  },
+  "updated": "2026-10-30T06:33:51.171Z"
 }
